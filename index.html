@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="styles-light.css" id="theme-style">
+    <link rel="shortcut icon" href="img/pft.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="img/logo.jpg" alt="Logo" class="logo">
+            <h1>Personal Finance Tracker</h1>
+            <button id="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+        </header>
+        <div class="entry-form">
+            <input type="text" id="description" placeholder="Description">
+            <input type="number" id="amount" placeholder="Amount">
+            <select id="category">
+                <option value="Income">Income</option>
+                <option value="Groceries">Groceries</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Utilities">Utilities</option>
+            </select>
+            <button onclick="addEntry()">Add</button>
+        </div>
+        <div class="list" id="list"></div>
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+        <footer>
+            <p>&copy; 2024 CodeMaster. All rights reserved.</p>
+            <div class="social-media">
+                <a href="https://discord.com/invite/nguYr7xD?utm_source=Discord%20Widget&utm_medium=Connect" target="_blank"><i class="fab fa-discord" style="color: rgb(68, 171, 255);"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61559501661235" target="_blank"><i class="fab fa-facebook-f" style="color: rgb(0, 140, 255);"></i></a>
+                <a href="https://www.instagram.com/_code.master/" target="_blank"><i class="fab fa-instagram" style="color: orangered;"></i></a>
+                <a href="mailto:info@codemaster.ltd" target="_blank"><i class="fa fa-envelope" style="color: rgb(255, 234, 208);"></i></a>
+                <a href="https://www.youtube.com/@CodeMaster2024" target="_blank"><i class="fab fa-youtube" style="color: red;"></i></a>
+            </div>
+        </footer>
+        <a id="version"></a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
